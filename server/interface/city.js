@@ -5,7 +5,7 @@ const router = new Router({
 
 router.get('/list', async (ctx) => {
   ctx.body = {
-    list: ['北京', '天津']
+    list: ['北京', '天津', '上海', '重庆']
   }
 })
 export default router

@@ -9,7 +9,10 @@ const store = () => new Vuex.Store({
   modules: {
     cities,
     navbars
+  },
+  actions: {
+
   }
 })
-// 需实例化Vuex, 再抛出。与之前直接抛出vuex不一样
+// 需实例化Vuex,再抛出。与之前直接抛出vuex不一样
 export default store

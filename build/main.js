@@ -121,8 +121,8 @@ module.exports = {
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_F_nuxt_meituan_node_modules_babel_runtime_regenerator__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_F_nuxt_meituan_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_F_nuxt_meituan_node_modules_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_E_koaDemo_nuxt_meituan_node_modules_babel_runtime_regenerator__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_E_koaDemo_nuxt_meituan_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_E_koaDemo_nuxt_meituan_node_modules_babel_runtime_regenerator__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_router__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_koa_router__);
 
@@ -137,13 +137,13 @@ var router = new __WEBPACK_IMPORTED_MODULE_1_koa_router___default.a({
 });
 
 router.get('/list', function () {
-  var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_F_nuxt_meituan_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(ctx) {
-    return __WEBPACK_IMPORTED_MODULE_0_F_nuxt_meituan_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+  var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_E_koaDemo_nuxt_meituan_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(ctx) {
+    return __WEBPACK_IMPORTED_MODULE_0_E_koaDemo_nuxt_meituan_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
             ctx.body = {
-              list: ['北京', '天津']
+              list: ['北京', '天津', '上海', '重庆']
             };
 
           case 1:
@@ -190,8 +190,8 @@ module.exports = require("regenerator-runtime");
 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_F_nuxt_meituan_node_modules_babel_runtime_regenerator__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_F_nuxt_meituan_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_F_nuxt_meituan_node_modules_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_E_koaDemo_nuxt_meituan_node_modules_babel_runtime_regenerator__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_E_koaDemo_nuxt_meituan_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_E_koaDemo_nuxt_meituan_node_modules_babel_runtime_regenerator__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_koa__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_nuxt__ = __webpack_require__(4);
@@ -200,9 +200,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 
 
 var start = function () {
-  var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_F_nuxt_meituan_node_modules_babel_runtime_regenerator___default.a.mark(function _callee() {
+  var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_E_koaDemo_nuxt_meituan_node_modules_babel_runtime_regenerator___default.a.mark(function _callee() {
     var app, host, port, config, nuxt, builder;
-    return __WEBPACK_IMPORTED_MODULE_0_F_nuxt_meituan_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+    return __WEBPACK_IMPORTED_MODULE_0_E_koaDemo_nuxt_meituan_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
@@ -232,8 +232,9 @@ var start = function () {
 
           case 10:
 
-            app.use(__WEBPACK_IMPORTED_MODULE_3__interface_city__["a" /* default */].routes()).use(__WEBPACK_IMPORTED_MODULE_3__interface_city__["a" /* default */].allowedMethods()); // 使用新建接口路由
-            // app.use(city.routes(), city.allowedMethods())
+            // 使用新建接口路由
+            app.use(__WEBPACK_IMPORTED_MODULE_3__interface_city__["a" /* default */].routes()).use(__WEBPACK_IMPORTED_MODULE_3__interface_city__["a" /* default */].allowedMethods());
+            // app.use(cityInterface.routes(), cityInterface.allowedMethods()) 或者该方式
 
             app.use(function (ctx) {
               ctx.status = 200;
@@ -262,6 +263,8 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 
 
 
+
+// 引入接口
 
 
 start();

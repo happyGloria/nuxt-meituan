@@ -1,5 +1,7 @@
 import Koa from 'koa'
 import { Nuxt, Builder } from 'nuxt'
+
+// 引入接口
 import cityInterface from './interface/city'
 
 async function start () {
@@ -20,8 +22,9 @@ async function start () {
     await builder.build()
   }
 
-  app.use(cityInterface.routes()).use(cityInterface.allowedMethods()) // 使用新建接口路由
-  // app.use(city.routes(), city.allowedMethods())
+  // 使用新建接口路由
+  app.use(cityInterface.routes()).use(cityInterface.allowedMethods())
+  // app.use(cityInterface.routes(), cityInterface.allowedMethods()) 或者该方式
 
   app.use(ctx => {
     ctx.status = 200
