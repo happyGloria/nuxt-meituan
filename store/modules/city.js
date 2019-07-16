@@ -1,15 +1,15 @@
 const state = () => ({
-  app: []
+  list: ['a']
 })
 
 const mutations = {
   add (state, text) {
-    state.app.push(text)
+    state.list.push(text)
   }
 }
 
 const actions = {
-  add ({commit, text}) {
+  add ({commit}, text) {
     commit('add', text)
   }
 }

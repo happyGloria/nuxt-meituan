@@ -1,15 +1,17 @@
 const state = () => ({
-  navbar: []
+  app: []
 })
 
 const mutations = {
   add (state, text) {
-    state.navbar.push(text)
+    state.app.push(text)
   }
 }
 
 const actions = {
-  add ({commit, text}) {
+  add ({
+    commit
+  }, text) {
     commit('add', text)
   }
 }
